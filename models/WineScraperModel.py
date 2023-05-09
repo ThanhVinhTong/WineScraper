@@ -19,7 +19,6 @@ class WineScraper:
         wine_urls = []
         wine_names = []
         for page_number in tqdm(range(1, n)):
-            print(f"checking page {wine_url.format(page_number)}")
             driver.get(wine_url.format(page_number))
 
             wine_cards = driver.find_elements(By.CLASS_NAME, "product-meta")

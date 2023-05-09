@@ -6,7 +6,8 @@ from models import WineScraperModel
 from tools import CreateFolder
 
 
-urls = ["https://ruouvang24h.vn/ruou-vang-tay-ban-nha/page/{}",
+urls = ["https://ruouvang24h.vn/ruou-vang-y/page/{}",
+        "https://ruouvang24h.vn/ruou-vang-tay-ban-nha/page/{}",
         "https://ruouvang24h.vn/ruou-vang-new-zealand/page/{}",
         "https://ruouvang24h.vn/ruou-vang-argentina/page/{}",
         "https://ruouvang24h.vn/ruou-vang-duc/page/{}",

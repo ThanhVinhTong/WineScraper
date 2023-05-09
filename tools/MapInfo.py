@@ -1,16 +1,16 @@
-from tools import translate_text
+from tools import TranslateText
 
 # because each wine card on the website has different columns order so we need to map the wine's information to its appropriate column
 def find_info(cols, infos):
     for col_index in range(0, len(cols)):
         if "Xuất xứ" in cols[col_index].text:
-            country = translate_text.translating("nước " + infos[col_index-1].text).text.lower()
+            country = TranslateText.translating("nước " + infos[col_index-1].text).text.lower()
         if "Vùng làm vang" in cols[col_index].text:
             region = infos[col_index-1].text.lower()
         if "Hãng sản xuất" in cols[col_index].text:
             producer = infos[col_index-1].text.lower()
         if "Loại vang" in cols[col_index].text:
-            wine_type = translate_text.translating(infos[col_index-1].text).text.lower()
+            wine_type = TranslateText.translating(infos[col_index-1].text).text.lower()
         if "Nồng độ" in cols[col_index].text:
             alcohol_content = infos[col_index-1].text.lower()
         if "Dung tích" in cols[col_index].text:
